@@ -4,8 +4,13 @@ import ProductForm from '../ProductForm/ProductForm'
 import Product from '../../services/Product'
 import './ProductManager.scss'
 
+export const CREATE_FORM = 'CREATE'
+export const UPDATE_FORM = 'UPDATE'
+
 function ProductManager () {
   const [products, setProducts] = useState([])
+  const [formMode, setFormMode] = useState(CREATE_FORM)
+  const [selectedProduct, setSelectedProduct] = useState(undefined)
 
   useEffect(() => {
     Product.getProducts().then((data) => {
@@ -15,8 +20,8 @@ function ProductManager () {
 
   return (
     <section className='product-manager'>
-      <ProductsList />
-      <ProductForm />
+      <ProductsList products={products} />
+      <ProductForm mode={formMode} product={selectedProduct} />
     </section>
   )
 }
