@@ -2,12 +2,14 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
   
   //borrar esto al agregar los estilos
-  height: 500px; 
-  background-color: #ffd57a;
 }
+
+.hide {
+  display: none;
+}
+
 
 @media screen and (min-width: 1024px) {
   .product-form {

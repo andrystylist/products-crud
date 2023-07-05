@@ -10,18 +10,26 @@ export const UPDATE_FORM = 'UPDATE'
 function ProductManager () {
   const [products, setProducts] = useState([])
   const [formMode, setFormMode] = useState(CREATE_FORM)
-  const [selectedProduct, setSelectedProduct] = useState(undefined)
+  /* form states */
+  const [isEditing, setIsEditing] = useState(false);
+  const [formProduct, setFormProduct] = useState({
+    productID: '',
+    productName: '',
+    productColor: '',
+    productCategory: '',
+    productPrice: ''
+  })
 
-  useEffect(() => {
+/*   useEffect(() => {
     Product.getProducts().then((data) => {
       setProducts(data)
     })
-  }, [])
+  }, []) */
 
   return (
     <section className='product-manager'>
       <ProductsList products={products} />
-      <ProductForm mode={formMode} product={selectedProduct} />
+      <ProductForm isEditing={isEditing} product={formProduct} setProduct={setFormProduct} />
     </section>
   )
 }
