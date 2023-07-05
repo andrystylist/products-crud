@@ -1,5 +1,5 @@
 .product-manager {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  width: 100vw;
+  flex-flow: row wrap;
 }
