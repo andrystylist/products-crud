@@ -6,6 +6,48 @@
       "color": "White",
       "category": "Music",
       "price": 386
+    },
+    {
+      "id": 2,
+      "name": "Fantastic Frozen Shirt",
+      "color": "Pink",
+      "category": "Clothing",
+      "price": 20
+    },
+    {
+      "id": 3,
+      "name": "Generic Steel Bike",
+      "color": "Black",
+      "category": "Home",
+      "price": 638
+    },
+    {
+      "id": 4,
+      "name": "Awesome Concrete Bike",
+      "color": "Green",
+      "category": "Baby",
+      "price": 42
+    },
+    {
+      "id": 5,
+      "name": "Unbranded Plastic Shirt",
+      "color": "Lime",
+      "category": "Home",
+      "price": 461
+    },
+    {
+      "id": 6,
+      "name": "Fantastic Frozen Car",
+      "color": "Red",
+      "category": "Music",
+      "price": 621
+    },
+    {
+      "id": 7,
+      "name": "Oriental Cotton Chicken",
+      "color": "Sky Blue",
+      "category": "Books",
+      "price": 235
     }
   ],
   "categories": [
@@ -16,6 +58,19 @@
     {
       "id": 2,
       "name": "Clothing"
-    }
+    },
+    {
+      "id": 3,
+      "name": "Home"
+    },
+    {
+      "id": 4,
+      "name": "Baby"
+    },
+    {
+      "id": 5,
+      "name": "Books"
+    },
+  
   ]
 }
