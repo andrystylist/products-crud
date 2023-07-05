@@ -7,17 +7,34 @@ import './ProductManager.scss'
 export const CREATE_FORM = 'CREATE'
 export const UPDATE_FORM = 'UPDATE'
 
+let data = [
+    {
+      "id": 1,
+      "name": "Recycled Steel Sausages",
+      "color": "White",
+      "category": "Music",
+      "price": 386
+    },
+    {
+      "id": 2,
+      "name": "Fantastic Frozen Shirt",
+      "color": "Pink",
+      "category": "Clothing",
+      "price": 20
+    }
+];
+
 function ProductManager () {
-  const [products, setProducts] = useState([])
+  const [products, setProducts] = useState(data)
   const [formMode, setFormMode] = useState(CREATE_FORM)
   /* form states */
-  const [isEditing, setIsEditing] = useState(false);
+  const [isEditing, setIsEditing] = useState(true);
   const [formProduct, setFormProduct] = useState({
-    productID: '',
-    productName: '',
-    productColor: '',
-    productCategory: '',
-    productPrice: ''
+    id: 2,
+    name: "Fantastic Frozen Shirt",
+    color: "Pink",
+    category: "Clothing",
+    price: 20
   })
 
 /*   useEffect(() => {
@@ -29,7 +46,14 @@ function ProductManager () {
   return (
     <section className='product-manager'>
       <ProductsList products={products} />
-      <ProductForm isEditing={isEditing} product={formProduct} setProduct={setFormProduct} />
+      <ProductForm
+        isEditing={isEditing}
+        setIsEditing={setIsEditing}
+        product={formProduct}
+        setProduct={setFormProduct}
+        products={products}
+        setProducts={setProducts}
+      />
     </section>
   )
 }
