@@ -1,6 +1,17 @@
 .products-list {
-  min-height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+
+
+  //borrar esto al agregar los estilos
+  height: 500px;
+  background-color: #cbffa1;
+}
+
+@media screen and (min-width: 1024px) {
+  .products-list {
+    width: 60%;
+  }
 }
