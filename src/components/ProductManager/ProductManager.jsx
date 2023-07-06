@@ -55,14 +55,12 @@ function ProductManager () {
         onDeleteProduct={fetchData}
       />
       <ProductForm
-        isEditing={isEditing}
-        setIsEditing={setIsEditing}
-        product={formProduct}
-        setProduct={setFormProduct}
-        products={products}
-        setProducts={setProducts}
+        mode={formMode}
+        product={selectedProduct}
+        setProduct={setSelectedProduct}
+        setFormMode={setFormMode}
+        onSaveData={fetchData}
       />
-
     </section>
   )
 }

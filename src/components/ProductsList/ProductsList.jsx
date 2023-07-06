@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
 import { CREATE_FORM, UPDATE_FORM } from '../ProductManager/ProductManager'
 import './ProductsList.scss'
@@ -72,7 +73,7 @@ function ProductsList ({ isLoading, products, onListAction, onDeleteProduct }) {
                     {product.category}
                     </td>
                     <td className="products-list__td">
-                    ${product.price.toFixed(2)}
+                    ${Number(product.price).toFixed(2)}
                     </td>
                     <td className="products-list__td  products-list__td--actions">
                       <button
