@@ -28,7 +28,7 @@ function ProductManager () {
   const [products, setProducts] = useState(data)
   const [formMode, setFormMode] = useState(CREATE_FORM)
   /* form states */
-  const [isEditing, setIsEditing] = useState(true);
+  const [isEditing, setIsEditing] = useState(false);
   const [formProduct, setFormProduct] = useState({
     id: 2,
     name: "Fantastic Frozen Shirt",

@@ -43,6 +43,7 @@ button {
   border-radius: 5px;
   padding: 8px 16px 6px;
   margin: 5px;
+  transition: all 0.5s;
 }
 
 button:hover {
@@ -50,4 +51,13 @@ button:hover {
   color: $primary-button;
   background-color: #fff;
   cursor: pointer;
+}
+
+a {
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.5s;
+}
+
+a:hover {
+  border-bottom: 1px solid #fff;
 }
