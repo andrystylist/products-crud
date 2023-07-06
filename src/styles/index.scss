@@ -1,7 +1,63 @@
 @use './reset';
 @use './variables';
+@import './variables';
 
 :root, body {
   font-family: 'Overpass', sans-serif;
 }
-  
+
+h1, h2 {
+  font-size: $fs-lg;
+  font-weight: 700;
+
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: $fs-sm;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+
+  background-color: #fff;
+  font-weight: 200;
+
+  padding: 6px 3px 4px;
+  border: 1px solid $gray;
+  border-radius: 5px;
+  margin-bottom: 29px;
+}
+
+input:focus-visible {
+  outline: 1px solid $gray;
+}
+
+button {
+  font-size: $fs-md;
+  font-weight: 900;
+  background-color: $primary-button;
+  color: #fff;
+
+  border-radius: 5px;
+  padding: 8px 16px 6px;
+  margin: 5px;
+  transition: all 0.5s;
+}
+
+button:hover {
+  outline: 1px solid $primary-button;
+  color: $primary-button;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+a {
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.5s;
+}
+
+a:hover {
+  border-bottom: 1px solid #fff;
+}
