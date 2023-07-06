@@ -1,9 +1,47 @@
+@import '../../styles/variables';
+
 .product-form {
   width: 100%;
   display: flex;
-  justify-content: center;
-  
-  //borrar esto al agregar los estilos
+
+  padding: 54px 12px;
+
+  form {
+    flex: 1;
+  }
+}
+
+.product-form__body {
+  background-color: $secondary-color;
+  box-shadow: $box-shadow;
+
+  padding: 20px 16px;
+  border-radius: 5px;
+}
+
+.product-form__action-section {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.product-form__button--cancel {
+  background-color: $secondary-button;
+}
+
+.product-form__button--cancel:hover {
+  background-color: #fff;
+  outline: 1px solid $secondary-button;
+  color: $secondary-button;
+}
+
+.product-form__button--update {
+  background-color: $third-button;
+}
+
+.product-form__button--update:hover {
+  background-color: #fff;
+  outline: 1px solid $third-button;
+  color: $third-button;
 }
 
 .hide {
@@ -13,6 +51,6 @@
 
 @media screen and (min-width: 1024px) {
   .product-form {
-    width: 40%;
+    width: 33%;
   }
 }

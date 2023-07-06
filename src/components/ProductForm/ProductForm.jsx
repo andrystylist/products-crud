@@ -59,23 +59,22 @@ function ProductForm({
         <div className="product-form__body">
 
           <label htmlFor="name">PRODUCT NAME</label>
-          <input type="text" name="name" id="name" value={product.name} onChange={handleChange} />
+          <input type="text" name="name" id="name" value={product.name} onChange={handleChange} placeholder='your product name' />
           <label htmlFor="color">COLOR</label>
-          <input type="text" name="color" id="color" value={product.color} onChange={handleChange} />
+          <input type="text" name="color" id="color" value={product.color} onChange={handleChange} placeholder='silver, black, white, etc.' />
           <label htmlFor="category">CATEGORY</label>
           <input type="text" name="category" id="category" value={product.category} onChange={handleChange} />
           <label htmlFor="price">PRICE</label>
           <input type="number" name="price" id="price" value={product.price} onChange={handleChange} />
 
-        </div>
-
-        <div className="product-form__action-section">
-
-            <button type='button' onClick={handleOnCancel} >Cancel</button>
-            <button className={`product-form__button--cancel ${isEditing ? '' : 'hide'}`} type='submit'>Update</button>
-            <button className={`product-form__button--cancel ${isEditing ? 'hide' : ''}`} type='submit'>Add</button>
+          <div className="product-form__action-section">
+              <button className="product-form__button--cancel" type='button' onClick={handleOnCancel} >Cancel</button>
+              <button className={`product-form__button--update ${isEditing ? '' : 'hide'}`} type='submit'>Update</button>
+              <button className={`product-form__button--add ${isEditing ? 'hide' : ''}`} type='submit'>Add</button>
+          </div>
 
         </div>
+
       </form>
 
     </section>
