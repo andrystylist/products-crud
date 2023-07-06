@@ -1,16 +1,113 @@
+@use '../../styles/variables';
+
+
 .product-form {
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+
+  padding: 54px 12px;
+
+  form {
+    flex: 1;
+  }
+
+  h1, h2 {
+    font-size: variables.$fs-lg;
+    font-weight: 700;
   
-  //borrar esto al agregar los estilos
-  height: 500px; 
-  background-color: #ffd57a;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-size: variables.$fs-sm;
+    font-weight: bold;
+  }
+  
+  input, select {
+    width: 100%;
+  
+    background-color: #fff;
+    font-weight: 200;
+  
+    padding: 6px 3px 4px;
+    border: 1px solid variables.$gray;
+    border-radius: 5px;
+    margin-bottom: 29px;
+  }
+  
+  input:focus-visible {
+    outline: 1px solid variables.$gray;
+  }
+  
+  button {
+    font-size: variables.$fs-md;
+    font-weight: 900;
+    background-color: variables.$primary-button;
+    color: #fff;
+  
+    border-radius: 5px;
+    padding: 8px 16px 6px;
+    margin: 5px;
+    transition: all 0.5s;
+  }
+  
+  button:hover {
+    outline: 1px solid variables.$primary-button;
+    color: variables.$primary-button;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  a {
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+  }
+  
+  a:hover {
+    border-bottom: 1px solid #fff;
+  }
 }
+
+.product-form__body {
+  background-color: variables.$secondary-color;
+  box-shadow: variables.$box-shadow;
+
+  padding: 20px 16px;
+  border-radius: 5px;
+}
+
+.product-form__action-section {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.product-form__button--cancel {
+  background-color: variables.$secondary-button;
+}
+
+.product-form__button--cancel:hover {
+  background-color: #fff;
+  outline: 1px solid variables.$secondary-button;
+  color: variables.$secondary-button;
+}
+
+.product-form__button--update {
+  background-color: variables.$third-button;
+}
+
+.product-form__button--update:hover {
+  background-color: #fff;
+  outline: 1px solid variables.$third-button;
+  color: variables.$third-button;
+}
+
+.hide {
+  display: none;
+}
+
 
 @media screen and (min-width: 1024px) {
   .product-form {
-    width: 40%;
+    width: 33%;
   }
 }

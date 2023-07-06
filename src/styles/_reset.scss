@@ -16,7 +16,7 @@
   --secondary-color: $secondary-color;
   --font-color: $font-color;
   /* Tipografía */
-  --primary-font: sans-serif;
+  --primary-font: Overpass sans-serif;
   --secondary-font: Verdana;
 }
 
@@ -138,7 +138,6 @@ q:after {
 form,
 input,
 textarea,
-select,
 button,
 label {
   font-family: inherit;
