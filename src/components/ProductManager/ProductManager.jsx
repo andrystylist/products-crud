@@ -11,17 +11,33 @@ function ProductManager () {
   const [products, setProducts] = useState([])
   const [formMode, setFormMode] = useState(CREATE_FORM)
   const [selectedProduct, setSelectedProduct] = useState(undefined)
+  const [isLoading, setLoading] = useState(true)
+
+  const fetchData = async () => {
+    setLoading(true)
+    const data = await Product.getProducts()
+    setProducts(data)
+    setLoading(false)
+  }
+
+  const handleListAction = (newSetFormMode, newSelectedProduct) => {
+    setFormMode(newSetFormMode)
+    setSelectedProduct(newSelectedProduct)
+  }
 
   useEffect(() => {
-    Product.getProducts().then((data) => {
-      setProducts(data)
-    })
+    fetchData()
   }, [])
 
   return (
     <section className='product-manager'>
-      <ProductsList products={products} />
-      <ProductForm mode={formMode} product={selectedProduct} />
+      <ProductsList
+        isLoading={isLoading}
+        products={products}
+        onListAction={handleListAction}
+        onDeleteProduct={fetchData}
+      />
+      <ProductForm mode={formMode} product={selectedProduct} onSaveData={fetchData} />
     </section>
   )
 }

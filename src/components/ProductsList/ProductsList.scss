@@ -1,13 +1,98 @@
+@use '../../styles/variables';
+
 .products-list {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2.5rem;
+  flex-direction: column;
+  padding: 0 1rem;
 
+  &__button {
+    transition: all 2.5ms;
 
-  //borrar esto al agregar los estilos
-  height: 500px;
-  background-color: #cbffa1;
+    &:hover {
+      opacity: .9;
+    }
+
+    &:active {
+      scale: 0.99;
+    }
+
+    &--action {
+      color: variables.$add-button-bg-color;
+      font-weight: bold;
+      padding: 0 .4rem;
+    }
+
+    &--add {
+      color: white;
+      background-color: variables.$add-button-bg-color;
+      padding: .8rem 1rem;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  &__table {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__table-container {
+    width: 100%;
+    border: 2px solid variables.$table-border-color;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+
+  &__td {
+    padding: 1.2rem 0.8rem;
+    color: variables.$primary-color;
+
+    &--actions {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &--bold {
+      font-weight: bold;
+      color: variables.$black;
+      width: 40%;
+    }
+
+    &--empty {
+      text-align: center;
+    }
+  }
+
+  &__th {
+    text-align: left;
+    padding: 1.2rem 0;
+    padding-left: 0.8rem;
+    text-transform: uppercase;
+    background-color: variables.$table-bg-color;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 2.5rem;
+    
+  }
+
+  tr {
+    border-bottom: 2px solid variables.$table-border-color;
+  }
 }
 
 @media screen and (min-width: 1024px) {
