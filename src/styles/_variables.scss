@@ -10,15 +10,20 @@ $table-bg-color: #F9FAFB;
 // Override variables
 
 $primary-color: #1e2a37;
-$gray: #a1a1a1;
+$gray: #E1E7EC;
 $secondary-color: #f9fafb;
 $font-color: #fcfcfc;
 $primary-button: #1b71fc;
 $secondary-button: #6a727f;
 $third-button: #1faa51;
+$form-label-color: #374150;
+$form-input-color: #6B7480;
+$table-th-text-color: #374150;
+$table-name-text-color: #374150;
+$table-td-text-color: #6B7480;
 
-$fs-sm: 14px;
-$fs-md: $fs-sm + 2px;
-$fs-lg: $fs-md + 14px;
+$fs-sm: 1rem;
+$fs-md: 1.5rem;
+$fs-lg: 2rem;
 
 $box-shadow: 8px 8px 14px -5px rgba(0, 0, 0, 0.1);

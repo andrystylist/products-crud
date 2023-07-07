@@ -1,11 +1,10 @@
 @use '../../styles/variables';
 
-
 .product-form {
   width: 100%;
   display: flex;
 
-  padding: 54px 12px;
+  padding: 0 12px;
 
   form {
     flex: 1;
@@ -14,29 +13,29 @@
   h1, h2 {
     font-size: variables.$fs-lg;
     font-weight: 700;
-  
+    padding: 10px;
     margin-bottom: 20px;
   }
   
   label {
     font-size: variables.$fs-sm;
     font-weight: bold;
+    color: variables.$form-label-color;
   }
   
   input, select {
     width: 100%;
-  
     background-color: #fff;
-    font-weight: 200;
-  
-    padding: 6px 3px 4px;
+    padding: 12px 5px;
     border: 1px solid variables.$gray;
     border-radius: 5px;
     margin-bottom: 29px;
-  }
+    color: variables.$form-input-color;
 
-  select {
-    padding: 7px 3px;
+    &::placeholder {
+      font-style: italic;
+      opacity: .5;
+    }
   }
   
   input:focus-visible {
@@ -44,22 +43,25 @@
   }
   
   button {
-    font-size: variables.$fs-md;
-    font-weight: 900;
-    background-color: variables.$primary-button;
-    color: #fff;
-  
+    color: white;
+    background-color: variables.$add-button-bg-color;
+    padding: .5rem 1rem;
     border-radius: 5px;
-    padding: 8px 16px 6px;
-    margin: 5px;
-    transition: all 0.5s;
-  }
-  
-  button:hover {
-    outline: 1px solid variables.$primary-button;
-    color: variables.$primary-button;
-    background-color: #fff;
-    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
+    height: 40px;
+    max-height: 40px;
+    width: 5rem;
+    max-width: 5rem;
+    transition: all ease .5s;
+
+    &:hover {
+      opacity: .8;
+    }
+
+    &:active {
+      opacity: .5;
+    }
   }
   
   a {
@@ -70,43 +72,36 @@
   a:hover {
     border-bottom: 1px solid #fff;
   }
-}
 
-.product-form__body {
-  background-color: variables.$secondary-color;
-  box-shadow: variables.$box-shadow;
-
-  padding: 20px 16px;
-  border-radius: 5px;
-}
-
-.product-form__action-section {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.product-form__button--cancel {
-  background-color: variables.$secondary-button;
-}
-
-.product-form__button--cancel:hover {
-  background-color: #fff;
-  outline: 1px solid variables.$secondary-button;
-  color: variables.$secondary-button;
-}
-
-.product-form__button--update {
-  background-color: variables.$third-button;
-}
-
-.product-form__button--update:hover {
-  background-color: #fff;
-  outline: 1px solid variables.$third-button;
-  color: variables.$third-button;
-}
-
-.hide {
-  display: none;
+  .product-form__body {
+    background-color: variables.$secondary-color;
+    box-shadow: variables.$box-shadow;
+  
+    padding: 20px 16px;
+    border-radius: 5px;
+  }
+  
+  .product-form__action-section {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .product-form__button--cancel {
+    background-color: variables.$secondary-button;
+    width: 6rem;
+    max-width: 6rem;
+    margin-right: 1rem;
+  }
+  
+  .product-form__button--update {
+    background-color: variables.$third-button;
+    width: 6rem;
+    max-width: 6rem;
+  }
+  
+  .hide {
+    display: none;
+  }
 }
 
 

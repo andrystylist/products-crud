@@ -40,7 +40,7 @@
       "name": "Fantastic Frozen Car",
       "color": "Red",
       "category": "Music",
-      "price": 621
+      "price": "621"
     },
     {
       "id": 7,
@@ -48,18 +48,6 @@
       "color": "Sky Blue",
       "category": "Books",
       "price": 235
-    },
-    {
-      "name": "TShirt",
-      "color": "Pink",
-      "price": "20",
-      "id": 8
-    },
-    {
-      "name": "Bike",
-      "color": "Silver",
-      "price": "123",
-      "id": 9
     }
   ],
   "categories": [
