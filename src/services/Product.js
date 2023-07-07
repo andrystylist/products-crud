@@ -1,15 +1,14 @@
+import host from './host'
 export default class Product {
-  static host = 'http://localhost:3000'
-
   static async getProducts () {
-    const response = await fetch(`${Product.host}/products`)
+    const response = await fetch(`${host}/products`)
     const jsonResponse = await response.json()
 
     return Array.isArray(jsonResponse) ? jsonResponse : []
   }
 
   static createProduct (product) {
-    return fetch(`${Product.host}/products`, {
+    return fetch(`${host}/products`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -21,7 +20,7 @@ export default class Product {
   }
 
   static updateProduct (product) {
-    return fetch(`${Product.host}/products/${product.id}`, {
+    return fetch(`${host}/products/${product.id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -33,7 +32,7 @@ export default class Product {
   }
 
   static deleteProduct (id) {
-    return fetch(`${Product.host}/products/${id}`, {
+    return fetch(`${host}/products/${id}`, {
       method: 'DELETE'
     }).then((response) => {
       return response.json()
