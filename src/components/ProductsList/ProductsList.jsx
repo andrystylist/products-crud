@@ -40,7 +40,7 @@ function ProductsList ({ isLoading, products, onListAction, onDeleteProduct }) {
       </header>
       <article className='products-list__table-container'>
         {isLoading && (
-          <div>Loading...</div>
+          <div className='products-list__loading'>Loading...</div>
         )}
         {!isLoading && (
             <table className="products-list__table">
