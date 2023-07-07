@@ -12,7 +12,7 @@
       "name": "Fantastic Frozen Shirt",
       "color": "Pink",
       "category": "Clothing",
-      "price": 20
+      "price": "30.657"
     },
     {
       "id": 3,
@@ -40,7 +40,7 @@
       "name": "Fantastic Frozen Car",
       "color": "Red",
       "category": "Music",
-      "price": 621
+      "price": "621"
     },
     {
       "id": 7,

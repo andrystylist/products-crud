@@ -37,7 +37,13 @@ function ProductManager () {
         onListAction={handleListAction}
         onDeleteProduct={fetchData}
       />
-      <ProductForm mode={formMode} product={selectedProduct} onSaveData={fetchData} />
+      <ProductForm
+        mode={formMode}
+        product={selectedProduct}
+        setProduct={setSelectedProduct}
+        setFormMode={setFormMode}
+        onSaveData={fetchData}
+      />
     </section>
   )
 }
