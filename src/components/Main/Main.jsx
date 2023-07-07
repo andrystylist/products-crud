@@ -3,7 +3,7 @@ import './Main.scss'
 
 function Main ({ children }) {
   return (
-    <main>
+    <main className='main'>
       <article className="container">
         {children}
       </article>
