@@ -1,3 +1,3 @@
-const host = 'http://localhost:3000'
+const host = 'https://backend-products-crud.onrender.com'
 
 export default host
