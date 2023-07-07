@@ -14,6 +14,8 @@ npm install
 npm run dev
 ```
 
+## Use teh Fake API server
+
 ### Install and use [JSON Server](https://www.npmjs.com/package/json-server)
 
 ```sh
