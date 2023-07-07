@@ -7,25 +7,8 @@ import './ProductManager.scss'
 export const CREATE_FORM = 'CREATE'
 export const UPDATE_FORM = 'UPDATE'
 
-let data = [
-    {
-      "id": 1,
-      "name": "Recycled Steel Sausages",
-      "color": "White",
-      "category": "Music",
-      "price": 386
-    },
-    {
-      "id": 2,
-      "name": "Fantastic Frozen Shirt",
-      "color": "Pink",
-      "category": "Clothing",
-      "price": 20
-    }
-];
-
 function ProductManager () {
-  const [products, setProducts] = useState(data)
+  const [products, setProducts] = useState([])
   const [formMode, setFormMode] = useState(CREATE_FORM)
   const [selectedProduct, setSelectedProduct] = useState(undefined)
   const [isLoading, setLoading] = useState(true)

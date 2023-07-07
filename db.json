@@ -52,8 +52,14 @@
     {
       "name": "TShirt",
       "color": "Pink",
-      "price": "40",
+      "price": "20",
       "id": 8
+    },
+    {
+      "name": "Bike",
+      "color": "Silver",
+      "price": "123",
+      "id": 9
     }
   ],
   "categories": [

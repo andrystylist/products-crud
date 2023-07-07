@@ -63,13 +63,13 @@ function ProductForm ({
         <div className="product-form__body">
 
           <label htmlFor="name">PRODUCT NAME</label>
-          <input type="text" name="name" id="name" value={product?.name || ''} onChange={handleChange} placeholder='your product name' />
+          <input type="text" name="name" id="name" value={product?.name || ''} onChange={handleChange} placeholder='your product name' required maxLength="50" />
           <label htmlFor="color">COLOR</label>
-          <input type="text" name="color" id="color" value={product?.color || ''} onChange={handleChange} placeholder='silver, black, white, etc.' />
+          <input type="text" name="color" id="color" value={product?.color || ''} onChange={handleChange} placeholder='silver, black, white, etc.' required maxLength="30" />
           <label htmlFor="category">CATEGORY</label>
           {/** Esto debería ser un select con options en lugar de un input */}
           {/* <input type="text" name="category" id="category" value={product.category} onChange={handleChange} /> */}
-          <select name="category" id="category" onChange={handleChange} value={product?.category || ''}>
+          <select name="category" id="category" onChange={handleChange} value={product?.category || ''} required>
             {categories.map((category) => (
               <option key={category.id} value={category.name}>
                 {category.name}
@@ -77,7 +77,7 @@ function ProductForm ({
             ))}
           </select>
           <label htmlFor="price">PRICE</label>
-          <input type="number" name="price" id="price" value={product?.price || ''} onChange={handleChange} />
+          <input type="number" name="price" id="price" value={product?.price || ''} onChange={handleChange} required />
 
           <div className="product-form__action-section">
               <button className={`product-form__button--cancel ${isEditing ? '' : 'hide'}`} type='button' onClick={handleOnCancel} >Cancel</button>
