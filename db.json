@@ -36,18 +36,18 @@
       "price": 461
     },
     {
-      "id": 6,
-      "name": "Fantastic Frozen Car",
-      "color": "Red",
-      "category": "Music",
-      "price": "621"
-    },
-    {
       "id": 7,
       "name": "Oriental Cotton Chicken",
       "color": "Sky Blue",
       "category": "Books",
       "price": 235
+    },
+    {
+      "name": "Glasses",
+      "color": "Silver",
+      "category": "Clothing",
+      "price": "80",
+      "id": 8
     }
   ],
   "categories": [

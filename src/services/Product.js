@@ -4,11 +4,11 @@ export default class Product {
     const response = await fetch(`${host}/products`)
     const jsonResponse = await response.json()
 
-    return Array.isArray(jsonResponse) ? jsonResponse : []
+    return Array.isArray(jsonResponse.data) ? jsonResponse.data : []
   }
 
   static createProduct (product) {
-    return fetch(`${host}/products`, {
+    return fetch(`${host}/product`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -20,7 +20,7 @@ export default class Product {
   }
 
   static updateProduct (product) {
-    return fetch(`${host}/products/${product.id}`, {
+    return fetch(`${host}/product/${product.id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -32,7 +32,7 @@ export default class Product {
   }
 
   static deleteProduct (id) {
-    return fetch(`${host}/products/${id}`, {
+    return fetch(`${host}/product/${id}`, {
       method: 'DELETE'
     }).then((response) => {
       return response.json()
