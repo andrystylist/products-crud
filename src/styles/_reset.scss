@@ -182,3 +182,16 @@ body {
   /* opcional */
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Configuración scrollbar */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  border-radius: 4px;
+}

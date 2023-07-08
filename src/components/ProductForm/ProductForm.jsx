@@ -71,8 +71,6 @@ function ProductForm ({
           <label htmlFor="color">COLOR</label>
           <input type="text" name="color" id="color" value={product?.color || ''} onChange={handleChange} placeholder='silver, black, white, etc.' required maxLength="30" />
           <label htmlFor="category">CATEGORY</label>
-          {/** Esto debería ser un select con options en lugar de un input */}
-          {/* <input type="text" name="category" id="category" value={product.category} onChange={handleChange} /> */}
           <select name="category" id="category" onChange={handleChange} value={product?.category || ''} required>
             <option value=""> - - - </option>
             {categories.map((category) => (
@@ -86,7 +84,7 @@ function ProductForm ({
 
           <div className="product-form__action-section">
               <button 
-                className={`product-form__button--cancel ${isEditing ? '' : 'hide'}`}
+                className='product-form__button--cancel'
                 type='button'
                 onClick={handleOnCancel}
                 disabled={isSaving}
