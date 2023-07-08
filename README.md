@@ -1,6 +1,6 @@
 # PROJECT Products - CRUD
 
-![screenshot](/screenshot.png)
+![screenshot](/screenshot.gif)
 
 ## Requirements
 

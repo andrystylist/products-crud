@@ -4,9 +4,10 @@ import { CREATE_FORM, UPDATE_FORM } from '../ProductManager/ProductManager'
 import './ProductsList.scss'
 import Product from '../../services/Product'
 
-function ProductsList ({ isLoading, products, onListAction, onDeleteProduct }) {
+function ProductsList ({ isLoading, products, onListAction, onDeleteProduct, mode }) {
   const handleAddClick = () => {
-    onListAction(CREATE_FORM, undefined)
+    mode === CREATE_FORM ?
+      onListAction(null, undefined) : onListAction(CREATE_FORM, undefined)
   }
   const handleEditClick = (product) => {
     onListAction(UPDATE_FORM, product)

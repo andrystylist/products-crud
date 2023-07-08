@@ -36,6 +36,7 @@ function ProductManager () {
         products={products}
         onListAction={handleListAction}
         onDeleteProduct={fetchData}
+        mode={formMode}
       />
       {formMode && (
         <ProductForm
