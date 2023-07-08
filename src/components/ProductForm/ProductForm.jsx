@@ -14,6 +14,7 @@ function ProductForm ({
   onSaveData
 }) {
   const [categories, setCategories] = useState([])
+  const [isSaving, setIsSaving] = useState(false)
   const isEditing = mode === UPDATE_FORM
 
   const handleChange = (event) => {
@@ -27,19 +28,22 @@ function ProductForm ({
   const handleSubmit = async (event) => {
     event.preventDefault()
 
-    if (isEditing) { // Edición
+    setIsSaving(true)
+    if (isEditing) { // Actualizando un producto ya existente
       await Product.updateProduct(product)
       setFormMode(CREATE_FORM)
-    } else { // Creación
+    } else { // Agregando  un producto nuevo
       await Product.createProduct(product)
     }
 
     onSaveData()
     resetProduct()
+    setIsSaving(false)
   }
 
   const handleOnCancel = () => {
     resetProduct()
+    setFormMode(undefined)
   }
 
   const resetProduct = () => {
@@ -81,9 +85,28 @@ function ProductForm ({
           <input type="number" name="price" id="price" placeholder='$1999,99' value={product?.price || ''} onChange={handleChange} required />
 
           <div className="product-form__action-section">
-              <button className={`product-form__button--cancel ${isEditing ? '' : 'hide'}`} type='button' onClick={handleOnCancel} >Cancel</button>
-              <button className={`product-form__button--update ${isEditing ? '' : 'hide'}`} type='submit'>Update</button>
-              <button className={`product-form__button--add ${isEditing ? 'hide' : ''}`} type='submit'>Add</button>
+              <button 
+                className={`product-form__button--cancel ${isEditing ? '' : 'hide'}`}
+                type='button'
+                onClick={handleOnCancel}
+                disabled={isSaving}
+              >
+                Cancel
+              </button>
+              <button
+                className={`product-form__button--update ${isEditing ? '' : 'hide'}`}
+                type='submit'
+                disabled={isSaving}
+              >
+                Update
+              </button>
+              <button
+                className={`product-form__button--add ${isEditing ? 'hide' : ''}`}
+                type='submit'
+                disabled={isSaving}
+              >
+                Add
+                </button>
           </div>
 
         </div>

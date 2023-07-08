@@ -3,11 +3,22 @@
 .products-list {
   width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
   margin-bottom: 2.5rem;
   flex-direction: column;
   padding: 0 1rem;
+
+  &__loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 320px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: variables.$form-input-color;
+    animation: loading 1s infinite;
+    transition: color 0.5s;
+  }
 
   &__button {
     transition: all ease .5s;
@@ -108,5 +119,17 @@
 @media screen and (min-width: 1024px) {
   .products-list {
     width: 67%;
+  }
+}
+
+@keyframes loading {
+  0%, 33% {
+    color: variables.$primary-color;
+  }
+  33%, 66% {
+    color: variables.$form-input-color; 
+  }
+  66%, 100% {
+    color: variables.$primary-color;
   }
 }

@@ -9,8 +9,8 @@ export const UPDATE_FORM = 'UPDATE'
 
 function ProductManager () {
   const [products, setProducts] = useState([])
-  const [formMode, setFormMode] = useState(CREATE_FORM)
-  const [selectedProduct, setSelectedProduct] = useState(undefined)
+  const [formMode, setFormMode] = useState()
+  const [selectedProduct, setSelectedProduct] = useState()
   const [isLoading, setLoading] = useState(true)
 
   const fetchData = async () => {
@@ -37,13 +37,15 @@ function ProductManager () {
         onListAction={handleListAction}
         onDeleteProduct={fetchData}
       />
-      <ProductForm
-        mode={formMode}
-        product={selectedProduct}
-        setProduct={setSelectedProduct}
-        setFormMode={setFormMode}
-        onSaveData={fetchData}
-      />
+      {formMode && (
+        <ProductForm
+          mode={formMode}
+          product={selectedProduct}
+          setProduct={setSelectedProduct}
+          setFormMode={setFormMode}
+          onSaveData={fetchData}
+        />
+      )}
     </section>
   )
 }
