@@ -68,6 +68,10 @@
   &__table {
     width: 100%;
 
+    th, td {
+      min-width: 110px;
+    }
+
     thead th:first-child {
       position: sticky;
       left: 0;
