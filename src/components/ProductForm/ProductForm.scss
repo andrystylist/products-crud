@@ -88,8 +88,7 @@
   
   .product-form__button--cancel {
     background-color: variables.$secondary-button;
-    width: 6rem;
-    max-width: 6rem;
+    min-width: 6rem;
     margin-right: 1rem;
   }
   
