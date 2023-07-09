@@ -46,8 +46,7 @@
       font-size: 1.2rem;
       height: 40px;
       max-height: 40px;
-      width: 5rem;
-      max-width: 5rem;
+      min-width: 5rem;
 
       &:active {
         opacity: 0.5;
@@ -70,6 +69,12 @@
 
     th, td {
       min-width: 110px;
+    }
+
+    td:last-child {
+      display: flex;
+      justify-content: center;
+      min-width: 150px;
     }
 
     thead th:first-child {
