@@ -51,8 +51,7 @@
     font-size: 1.2rem;
     height: 40px;
     max-height: 40px;
-    width: 5rem;
-    max-width: 5rem;
+    min-width: 5rem;
     transition: all ease .5s;
 
     &:hover {
@@ -95,8 +94,7 @@
   
   .product-form__button--update {
     background-color: variables.$third-button;
-    width: 6rem;
-    max-width: 6rem;
+    min-width: 6rem;
   }
   
   .hide {
